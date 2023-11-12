@@ -13,7 +13,7 @@ The console willl perform the following tasks:
 * do operations on objects
 * destroy an object
 
-## 0x03 Installation
+## Installation
 
 ```bash
 git clone https://github.com/ddedo2468/AirBnB_clone.git

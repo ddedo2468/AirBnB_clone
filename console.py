@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ the main hbnb console """
+
 import cmd
 import os
 from models import storage

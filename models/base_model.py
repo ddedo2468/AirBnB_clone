@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 
-"""BaseModel the parent class """
+""" BaseModel the parent class """
 from uuid import uuid4
 import models
 from datetime import datetime
 
 
 class BaseModel:
-    """Define BaseModel class"""
+    """ define BaseModel class """
 
     def __init__(self, *args, **kwargs):
-        """the class constructor """
+        """ the class constructor """
 
         format_time = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
@@ -26,20 +26,20 @@ class BaseModel:
             models.storage.new(self)
 
     def __str__(self):
-        """Print strint repr for the objs """
+        """ print strint repr for the objs """
 
         new_str = ("[{}] ({}) {}".format(self.__class__.__name__,
                                          self.id, self.__dict__))
         return new_str
 
     def save(self):
-        """Update the last time obj edited at """
+        """ update the last time obj edited at """
 
         self.updated_at = datetime.today()
         models.storage.save()
 
     def to_dict(self):
-        """return a dictionary of baseModel instances"""
+        """ return a dictionary of baseModel instances"""
 
         nw_dictionary = self.__dict__.copy()
         nw_dictionary["created_at"] = self.created_at.isoformat()

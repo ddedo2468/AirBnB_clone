@@ -20,21 +20,21 @@ class HBNBCommand(cmd.Cmd):
                 "City", "Place", "Review", "Amenity"]
 
     def do_quit(self, arg):
-        """Quit command to exit the program"""
+        """ quit command to exit the program """
         return True
 
     def do_EOF(self, arg):
-        """exit the command line with ctrl+d signal"""
+        """ exit the command line with ctrl+d signal """
         print("")
         return True
 
     def emptyline(self):
-        """handle an empty line prints nothing"""
+        """ handle an empty line prints nothing """
         pass
 
     def do_create(self, arg):
-        """Creates a new instance of a given class. The class'
-        ID is printed and the instance is saved to the file file.json.
+        """ creates a new instance of a given class. The class'
+        ID is printed and the instance is saved to the file file.json
         """
         args = arg.split()
         if len(args) == 0:
@@ -47,7 +47,7 @@ class HBNBCommand(cmd.Cmd):
             print(obj.id)
 
     def do_show(self, arg):
-        """shows all information about a class"""
+        """ shows all information about a class """
         args = arg.split()
         all_obj = storage.all()
 
@@ -65,7 +65,7 @@ class HBNBCommand(cmd.Cmd):
                 print(all_obj[obj])
 
     def do_destroy(self, arg):
-        """Deletes an instance of a given class with a given ID."""
+        """ deletes an instance of a given class with a given ID """
         args = arg.split()
         all_obj = storage.all()
 
@@ -84,8 +84,8 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_all(self, arg):
-        """Prints all string representation
-        of all instances of a given class.
+        """ prints all string representation
+        of all instances of a given class
         """
         class_name = arg.split()[0] if arg else None
         obj_list = []
@@ -100,8 +100,8 @@ class HBNBCommand(cmd.Cmd):
             print(obj_list)
 
     def do_update(self, arg):
-        """ Updates an instance based on the
-        class name, id, and kwargs passed.
+        """ updates an instance based on the
+        class name, id, and kwargs passed
         """
         args = arg.split()
         if len(args) == 0:

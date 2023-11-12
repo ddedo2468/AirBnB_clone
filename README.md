@@ -25,7 +25,7 @@ change to the `AirBnb` directory and run the command:
  ./console.py
 ```
 
-## 0x05 Usage
+## Usage
 
 * Start the console in interactive mode:
 
@@ -112,5 +112,5 @@ $
 
 ## Credits
 
-> *Console team: [Sayed](https://github.com/sayedH-Dev) & [Abdullah](https://github.com/ddedo2468)*
+### *Console team: [Sayed](https://github.com/sayedH-Dev) & [Abdullah](https://github.com/ddedo2468)*
 

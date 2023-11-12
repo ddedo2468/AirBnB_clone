@@ -12,6 +12,7 @@ from models.city import City
 from models.user import User
 from models.amenity import Amenity
 
+
 class FileStorage:
     """ the file storage main class """
     __file_path = "file.json"
@@ -20,12 +21,12 @@ class FileStorage:
     def all(self):
         """ returns a dictionary """
         return FileStorage.__objects
-    
+
     def new(self, obj):
         """ set an obj in __objects """
         dictkey = "{}.{}".format(obj.__class__.__name__, obj.id)
         FileStorage.__objects[dictkey] = obj
-    
+
     def save(self):
         """ serialize __objects to json file """
         serialized = {}

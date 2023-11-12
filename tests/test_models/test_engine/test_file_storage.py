@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" unittests for the FileStorage class """
+""" unittests for the FileStorage class
+import json
+from datetime import datetime"""
 
 import os
-import json
 import models
 import unittest
-from datetime import datetime
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models.user import User

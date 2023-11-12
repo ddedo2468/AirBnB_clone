@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """ BaseModel the parent class """
+
 from uuid import uuid4
 import models
 from datetime import datetime

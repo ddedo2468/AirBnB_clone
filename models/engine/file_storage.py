@@ -44,7 +44,6 @@ class FileStorage:
                     for dictkey, obj_dict in serialized.items():
                         class_name = obj_dict.pop("__class__", None)
                         if class_name:
-                            obj_id = dictkey.split('.')[1]
                             cls = getattr(models, class_name)
                             obj = cls(**obj_dict)
                             FileStorage.__objects[dictkey] = obj
